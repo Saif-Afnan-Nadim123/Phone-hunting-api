@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUNTING PHONE</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- This is headear section-->
+
+    <header class="text-6xl">
+        HUnting Phone
+    </header>
+
+    <!-- This is main  section-->
+    <main class="container mx-auto mt-8">
+        <!--search section-->
+<section class="bg-gray-100 p-4 m-4">
+    <input id="search-field" type="text" placeholder="Search here" class="input input-bordered w-full max-w-xs" />
+    <button onclick="handleSearch()" class="btn btn-outline">Search</button>
+    <!--Another button here-->
+    <!-- <input id="search-2" type="text" placeholder="Search here" class="input input-bordered input-secondary w-full max-w-xs" />
+    <button onclick="HandelSearch2()" class="btn btn-outline btn-success">Search</button> -->
+</section>
+
+      <section>
+        <div id="spiner-loading" class="text-center my-40 hidden">
+            <span class="loading loading-spiner loading-lg ml-4"></span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="Phone-continer">
+           
+        </div>
+        <!--show all button-->
+        <div id="show-all-container" class="mt-2 ml-3 hidden my-8 text-center">
+            <button class="btn btn-outline btn-success">Showall</button>
+        </div>
+      </section> 
+<!-- show details modal -->
+<!-- Open the modal using ID.showModal() method -->
+
+<dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 id="show-details-phone-name" class="font-bold text-3xl">Hello!</h3>
+    <div id="show_detail-container"></div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+    </main>
+
+    <!-- This is footer section-->
+    <footer>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
